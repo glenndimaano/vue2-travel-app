@@ -8,7 +8,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
   {
     path: '/about',
@@ -18,7 +19,8 @@ const routes = [
   {
     path: '/details/:slug',
     name: 'DestinationDetails',
-    component: () => import(/* webpackChunkName: "detination" */ '../views/DestinationDetails.vue')
+    component: () => import(/* webpackChunkName: "detination" */ '../views/DestinationDetails.vue'),
+    props: true
   }
 ]
 
