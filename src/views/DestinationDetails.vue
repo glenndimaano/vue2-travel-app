@@ -1,5 +1,6 @@
 <template>
   <div class="destination-details">
+    <GoBack />
       <h1>{{ destination.name }}</h1>
       <img :src="require(`@/assets/${destination.image}`)" :alt="destination.name">
       <p>{{ destination.description }}</p>
@@ -21,7 +22,11 @@
 
 <script>
 import store from '@/store'
+import GoBack from '@/components/GoBack'
 export default {
+  components: {
+    GoBack
+  },
   props: {
     slug: {
       type: String,
